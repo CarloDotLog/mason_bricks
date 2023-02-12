@@ -1,3 +1,3 @@
 # 0.1.0+1
 
-- TODO: Describe initial release.
+- Initial release with implementation of a network client using the http package
