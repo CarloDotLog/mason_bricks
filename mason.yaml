@@ -1,3 +1,5 @@
 bricks:
   clean_architecture_folders:
     path: ./clean_architecture_folders
+  network_client:
+    path: ./network_client
