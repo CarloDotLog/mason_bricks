@@ -9,6 +9,7 @@ class NetworkClientImpl implements NetworkClient {
 
   final String _baseUrl;
 
+  @override
   Future<http.Response> get(String endpoint) async {
     try {
       final response = await http.get(Uri.parse(_baseUrl + endpoint));
@@ -20,6 +21,7 @@ class NetworkClientImpl implements NetworkClient {
     }
   }
 
+  @override
   Future<http.Response> post(String endpoint, {dynamic body}) async {
     try {
       final response = await http.post(Uri.parse(_baseUrl + endpoint), body: body);
@@ -31,6 +33,7 @@ class NetworkClientImpl implements NetworkClient {
     }
   }
 
+  @override
   Future<http.Response> put(String endpoint, {dynamic body}) async {
     try {
       final response = await http.put(Uri.parse(_baseUrl + endpoint), body: body);
@@ -42,6 +45,7 @@ class NetworkClientImpl implements NetworkClient {
     }
   }
 
+  @override
   Future<http.Response> delete(String endpoint) async {
     try {
       final response = await http.delete(Uri.parse(_baseUrl + endpoint));
