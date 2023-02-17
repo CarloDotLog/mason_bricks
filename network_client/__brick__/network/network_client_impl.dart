@@ -4,8 +4,8 @@ import 'package:http/http.dart' as http;
 import 'errors/http_error.dart';
 import 'network_client.dart';
 
-class NetworkClientImpl implements NetworkClient {
-  NetworkClientImpl(this._baseUrl);
+class NetworkClientImpl extends NetworkClient {
+  NetworkClientImpl(this._baseUrl) : super(_baseUrl);
 
   final String _baseUrl;
 
