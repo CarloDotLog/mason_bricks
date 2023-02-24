@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../network/network_client.dart';
-import '../../network/network_client_impl.dart';
+import 'package:{{{full_path}}}network/network_client.dart';
+import 'package:{{{full_path}}}network/network_client_impl.dart';
 
 void main() {
   group('NetworkClient', () {
