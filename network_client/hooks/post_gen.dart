@@ -23,7 +23,6 @@ Future<void> _createTest(HookContext context) async {
   try {
     final testProgress = context.logger.progress('Generating test');
 
-
     List<String> folders;
     if (Platform.isWindows) {
       folders = directory.split(r'\').toList();
@@ -35,7 +34,11 @@ Future<void> _createTest(HookContext context) async {
     var testDir = Directory(('${folders.sublist(0, libIndex).join('/')}/test'));
 
     // move test files under test/ folder
-    await Process.run('mv', ['commons', testDir.path]);
+    if (Platform.isWindows) {
+      await Process.run('move', ['commons', testDir.path]);
+    } else {
+      await Process.run('mv', ['commons', testDir.path]);
+    }
 
     // complete
     testProgress.complete(green.wrap('Tests created!') as String);
