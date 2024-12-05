@@ -1,3 +1,7 @@
+# 0.1.3+4
+
+- upgrade to mason 0.1.0
+
 # 0.1.2+3
 
 - feat: add test file for network_client
